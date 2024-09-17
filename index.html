@@ -12,16 +12,20 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f8ff;
             margin: 0;
             overflow: hidden; /* Prevents scrollbars from showing */
+            position: relative;
+            background-color: #f0f8ff;
+            background: url('bol/napoleon-8649233_1280.png') no-repeat center center fixed; /* Napoleon as full-page background */
+            background-size: cover; /* Ensure it covers the entire viewport */
         }
         .container {
             text-align: center;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
             position: relative;
         }
         h1 {
@@ -38,16 +42,43 @@
         }
         .sunflower {
             position: absolute;
-            bottom: -100px; /* Adjust based on the image size */
+            width: 80px; /* Adjust size as needed */
+            animation: float 10s ease-in-out infinite, move 15s linear infinite;
+            z-index: 0;
+        }
+        .sunflower:nth-of-type(1) {
+            top: 10%;
+            left: 10%;
+            animation: float 12s ease-in-out infinite, move 20s linear infinite;
+        }
+        .sunflower:nth-of-type(2) {
+            top: 20%;
+            left: 30%;
+            animation: float 14s ease-in-out infinite, move 22s linear infinite;
+        }
+        .sunflower:nth-of-type(3) {
+            top: 30%;
             left: 50%;
-            transform: translateX(-50%);
-            width: 200px;
-            animation: float 5s ease-in-out infinite;
+            animation: float 16s ease-in-out infinite, move 24s linear infinite;
+        }
+        .sunflower:nth-of-type(4) {
+            top: 40%;
+            left: 70%;
+            animation: float 18s ease-in-out infinite, move 26s linear infinite;
+        }
+        .sunflower:nth-of-type(5) {
+            top: 50%;
+            left: 90%;
+            animation: float 20s ease-in-out infinite, move 28s linear infinite;
         }
         @keyframes float {
             0% { transform: translateY(0); }
             50% { transform: translateY(-20px); }
             100% { transform: translateY(0); }
+        }
+        @keyframes move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(calc(100vw - 80px), calc(100vh - 80px)); }
         }
         @media (max-width: 375px) { /* iPhone 7 screen width */
             h1 {
@@ -57,7 +88,7 @@
                 font-size: 16px;
             }
             .sunflower {
-                width: 150px; /* Adjust size for smaller screens */
+                width: 60px; /* Adjust size for smaller screens */
             }
         }
     </style>
@@ -65,10 +96,14 @@
 <body>
     <div class="container">
         <h1>Best of Luck!</h1>
-        <p>Dear [Friend's Name],</p>
-        <p>Wishing you the best of luck on your SST exam! You've got this!</p>
-        <p class="footer">- From [Your Name]</p>
-        <img src="https://example.com/sunflower.jpg" alt="Sunflower" class="sunflower">
+        <p>Dear DRISHTI,</p>
+        <p>Wishing you the best of luck on your SST exam! YE TEMPLATE KAISA LGA AND SUNFLOWERS CENTRE NHI HO RHE PTA NHI KYON!! SAB TERI GALTI HAI!!</p>
+        <p class="footer">- From Pinank[Galeech insaan] </p>
     </div>
+    <img src="bol/flower-1169667_1280.png" alt="Sunflower" class="sunflower">
+    <img src="bol/flower-1169667_1280.png" alt="Sunflower" class="sunflower">
+    <img src="bol/flower-1169667_1280.png" alt="Sunflower" class="sunflower">
+    <img src="bol/flower-1169667_1280.png" alt="Sunflower" class="sunflower">
+    <img src="bol/flower-1169667_1280.png" alt="Sunflower" class="sunflower">
 </body>
 </html>
